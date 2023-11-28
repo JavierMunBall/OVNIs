@@ -22,6 +22,7 @@ gunicorn
 pyyaml
 fire
 pycaret==3.1.0
+pillow
 
 # Miscelánea
 yfinance
