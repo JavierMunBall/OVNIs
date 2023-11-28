@@ -273,52 +273,9 @@ with st.expander("Minería de datos"):
         "CONCLUSION 6.- En España, Andalucia seria la region con mas avistamientos, y en concreto Málaga. Murcia y las islas canarias áreas destacadas."
     )
 
-# Ruta al archivo CSV para almacenar las respuestas
-ruta_csv_respuestas = "respuestas_encuesta.csv"
-
 # Nueva Sección 11: Encuesta
 with st.expander("Encuesta"):
-
-    # Solicitamos el nombre del usuario
-    st.subheader("¿Cómo te llamas?")
-    nombre_usuario = st.text_input("Introduce tu nombre y apellidos:", "")
-
-    # Pregunta 1
-    st.subheader("Pregunta 1: ¿Crees que realmente existen los OVNIs?")
-    respuesta_pregunta_1 = st.radio("Opciones:", ["Sí", "No", "No sé qué es un OVNI"])
-
-    # Pregunta 2
-    st.subheader("Pregunta 2: Si fueras un OVNI, ¿de qué tipo serías?")
-    respuesta_pregunta_3 = st.radio("Opciones:", ["Bola de Fuego", "Disco", "Triangular", "Cono", "Otro"])
-
-    # Pregunta 3
-    st.subheader("Pregunta 3: ¿Crees que hay alienígenas en el Área 51?")
-    respuesta_pregunta_2 = st.radio("Opciones:", ["Sí", "No", "No existe ese lugar"])
-
-    # Solicitamos un testimonio de avistamiento
-    st.subheader("Pregunta 4: ¿Alguna vez has visto un OVNI? ")
-    testimonio = st.text_input("Cuéntanos tu experiencia", "")
-
-    # Pregunta 4
-    st.subheader("Pregunta 5: ¿Puntúa del 1 al 10 este proyecto?")
-    respuesta_pregunta_5 = st.slider("Selecciona tu puntuación:", min_value=1, max_value=10)
-
-    # Botón para enviar las respuestas de la encuesta
-    if st.button("Enviar Respuestas de la Encuesta"):
-        # Muestra las respuestas del usuario actual
-        st.success(f"Respuestas de {nombre_usuario}:")
-        st.success(f"Pregunta 1: {respuesta_pregunta_1}")
-        st.success(f"Pregunta 2: {respuesta_pregunta_2}")
-        st.success(f"Pregunta 3: {respuesta_pregunta_3}")
-        st.success(f"Pregunta 4: {testimonio}")
-        st.success(f"Pregunta 5: {respuesta_pregunta_5}")
-        
-        st.markdown("<h3 style='color: white; font-size: 2em;'>Muchas gracias y hasta la próxima 🖖</h3>", unsafe_allow_html=True)
-
-        # Almacena las respuestas en un archivo CSV
-        with open(ruta_csv_respuestas, 'a', encoding='utf-8', newline='') as file:
-            file.write(f"{nombre_usuario},{respuesta_pregunta_1},{respuesta_pregunta_2},{respuesta_pregunta_3},{testimonio},{respuesta_pregunta_5}\n")
-
+    st.markdown(f"https://forms.gle/tqwmKVsjKVwnRz8W8")
 #----------------------SIDEBAR------------------------------------------
 # Título de la barra lateral
 st.sidebar.markdown("<h1 style='color: white; text-decoration: underline;'><strong>Explora los Datos</strong></h1>", unsafe_allow_html=True)
