@@ -16,7 +16,6 @@ ortools
 # APIs y scripts
 wandb
 streamlit
-windows-curses
 Flask
 gunicorn
 pyyaml
